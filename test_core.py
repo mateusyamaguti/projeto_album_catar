@@ -1,4 +1,5 @@
 from core import Album
+from core import create_control
 import pytest
 
 def test_album():
@@ -16,3 +17,7 @@ def test_create_figure():
     assert isinstance(obj, list)
     assert len(obj) == 678
     assert obj[0] == '00'
+
+def test_create_control():
+    obj = create_control()
+    assert isinstance(create_control()[0], tuple)

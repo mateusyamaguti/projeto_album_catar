@@ -30,3 +30,10 @@ class Album:
                     'FWC27', 'FWC28', 'FWC29', 'C1',
                     'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
         return figures
+
+def create_control():
+    control = []
+    figures = Album._create_figure()
+    for figure in figures:
+        control.append((figure,''))
+        return control
