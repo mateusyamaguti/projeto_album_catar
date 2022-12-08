@@ -42,7 +42,7 @@ class Album:
         self.stickers_in_album = []
         self.repeated_stickers = {}
 
-    def verify_if_i_have_the_sticker(self, *stickers):
+    def verify_if_i_have_the_sticker(self, stickers):
         for sticker in stickers:
             if not sticker in self.stickers_in_album:
                 self.glue_sticker(sticker)
@@ -56,7 +56,4 @@ class Album:
         if sticker in self.repeated_stickers.keys():
             self.repeated_stickers[sticker] += 1
         else:
-            self.repeated_stickers[sticker] = 0
-
-
-
+            self.repeated_stickers[sticker] = 1
