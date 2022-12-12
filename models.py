@@ -1,3 +1,4 @@
+import csv
 from random import choice
 
 class Stickers:
@@ -66,3 +67,16 @@ class Album:
 
     def get_repeated_stickers(self):
         return self.__repeated_stickers
+
+    def create_sticker_in_album_report(self):
+        with open('stickers_in_album.csv', 'w', encoding='utf8', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            for sticker in self.__stickers_in_album:
+                csv_writer.writerow([sticker])
+
+    def create_missing_stickers_in_album_report(self, all_stickers):
+        missing_stickers = [sticker for sticker in all_stickers if sticker not in self.__stickers_in_album]
+        with open('missing_stickers_in_album.csv', 'w', encoding='utf8', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            for sticker in missing_stickers:
+                csv_writer.writerow([sticker])
