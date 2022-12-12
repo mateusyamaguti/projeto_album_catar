@@ -29,7 +29,7 @@ def main():
 
             opcao = int(input('\nQuantos pacotes com 5 figurinhas deseja abrir: '))
             number_sticker(opcao)
-            print(album.stickers_in_album)
+            print(album.get_stickers_in_album())
             
             replay = int(input('\n1 - Continuar \n2- fechar: '))
             if(replay == 1):
@@ -37,7 +37,7 @@ def main():
             elif(replay == 2):
                 break
         if(opcaoMatriz == 2):
-            print(album.repeated_stickers)
+            print(album.get_repeated_stickers())
 
             replay = int(input('\n1 - Continuar \n2- fechar: '))
             if(replay == 1):
