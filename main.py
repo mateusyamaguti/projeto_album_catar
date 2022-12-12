@@ -3,7 +3,7 @@ from models import Stickers, Album
 def number_sticker(x):
     for _ in range(x):
         op = stickers.open_package()
-        album.verify_if_i_have_the_stickers(op)
+        album.set_stickers(op)
 
 
 def main():
