@@ -86,3 +86,16 @@ class Album:
             csv_writer = csv.writer(csv_file)
             for sticker in missing_stickers:
                 csv_writer.writerow([sticker])
+
+    def create_repeated_stickers_report(self):
+        with open('repeated_sticker.csv', 'w', encoding='utf8', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            for repetead_sticker in self.__repeated_stickers.items():
+                csv_writer.writerow(repetead_sticker)
+
+
+# to do:
+# adicionar cabeçalhos
+# Verificar se precisa ter um atributo das figurinhas faltantes
+# criar uma função para salvar o csv (pensar se precisa)
+# criar uma função para a troca de figurinha
