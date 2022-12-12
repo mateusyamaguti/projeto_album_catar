@@ -52,7 +52,7 @@ class Album:
         else:
             return False
 
-    def get_stickers(self, stickers):
+    def set_stickers(self, stickers):
         for sticker in stickers:
             if not self.verify_sticker_in_album(sticker):
                 self.__glue_sticker(sticker)
