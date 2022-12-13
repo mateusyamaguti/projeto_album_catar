@@ -25,10 +25,10 @@ class Stickers:
         for country in countries:
             for cont in range(1, 21):
                 self.__stickers.append(f'{country}{cont}')
-                self.__stickers += ['FWC19', 'FWC20', 'FWC21', 'FWC22',
-                            'FWC23', 'FWC24', 'FWC25', 'FWC26',
-                            'FWC27', 'FWC28', 'FWC29', 'C1',
-                            'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
+        self.__stickers += ['FWC19', 'FWC20', 'FWC21', 'FWC22',
+                    'FWC23', 'FWC24', 'FWC25', 'FWC26',
+                    'FWC27', 'FWC28', 'FWC29', 'C1',
+                    'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8']
         return self.__stickers
 
     def open_package(self):
