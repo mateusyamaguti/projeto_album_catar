@@ -86,9 +86,14 @@ class Album:
     def create_repeated_stickers_report(self):
         save_csv_file('repeated_stickers.csv', self.__repeated_stickers.items(), ['sticker', 'quantity'])
 
+    def change_sticker(self, sticker):
+        try:
+            self.__repeated_stickers[sticker] -= 1
+            if self.__repeated_stickers[sticker] <= 0:
+                del self.__repeated_stickers[sticker]
+            return True
+        except KeyError:
+            return False
 
 # to do:
-# adicionar cabeçalhos
 # Verificar se precisa ter um atributo das figurinhas faltantes
-# criar uma função para salvar o csv (pensar se precisa)
-# criar uma função para a troca de figurinha
