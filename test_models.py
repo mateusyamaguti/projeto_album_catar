@@ -4,7 +4,7 @@ from models import Album
 import pytest
 import coverage
 
-'''Sticker class tests'''
+# Sticker class tests
 def test_Stickers():
     obj = Stickers()
     assert isinstance(obj, Stickers)
@@ -19,7 +19,7 @@ def test_get_all_stickers():
     assert isinstance(obj, list)
     assert len(obj) == 678
 
-'''Stickers class Album'''
+# Album class tests
 def test_Album():
     obj = Album()
     assert isinstance(obj, Album)
