@@ -1,7 +1,6 @@
 from random import choice
 from utils import save_csv_file
 
-import csv
 
 class Stickers:
     def __init__(self):
