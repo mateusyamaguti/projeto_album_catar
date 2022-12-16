@@ -56,7 +56,7 @@ def main():
             relatorio = int(input('\nDeseja criar relatório\n1- Sim \n2- Não\nInsira a opção desejada: '))
 
             if(relatorio == 1):
-                album.create_sticker_in_album_report()
+                album.create_stickers_in_album_report()
                 print('Relatório criado')
             elif(relatorio == 2):
                 pass
