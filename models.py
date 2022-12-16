@@ -83,7 +83,7 @@ class Album:
     def get_missing_stickers(self, all_stickers):
         return [sticker for sticker in all_stickers if sticker not in self.__stickers_in_album]
 
-    def create_sticker_in_album_report(self):
+    def create_stickers_in_album_report(self):
         save_csv_file('stickers_in_album.csv', self.__stickers_in_album, ['sticker'])
 
     def create_missing_stickers_in_album_report(self, all_stickers):
