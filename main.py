@@ -29,7 +29,7 @@ def main():
         '\n5- Mostrar Figurinhas salvas no CSV'
         '\n6- Mostrar Figurinhas Repetidas salvas no CSV'
         '\n7- Mostrar Figurinhas Faltantes salvas no CSV'
-        '\n8- Verificar se há figurinha no álbum'
+        '\n8- Verificar se a figurinha está no álbum'
         '\n9- Verificar se a figurinha é repetida'
         '\n10- Trocar figurinha'
         '\n11- Fechar programa')
@@ -114,21 +114,21 @@ def main():
             else:
                 print('Não possui CSV das figurinhas faltantes')
         elif(opcaoMatriz == 8):
-            sticker_ = input('\nDigite o nome da figurinha desejada desejada: ').upper()
+            sticker_ = input('\nDigite o nome da figurinha desejada: ').upper()
             if(album.verify_sticker_in_album(sticker_)):
                 print('\n----- Já possui no álbum -----')
             else:
                 print('\n----- Não possui no álbum -----')
 
         elif(opcaoMatriz == 9):
-            sticker_repeat = input('\nDigite o nome da figurinha desejada desejada: ').upper()
+            sticker_repeat = input('\nDigite o nome da figurinha desejada: ').upper()
             if(album.verify_sticker_in_repeated_stickers(sticker_repeat)):
                 print('\n----- Figurinha repetida -----')
             else:
                 print('\n----- Figurinha não repetida -----')
 
         elif(opcaoMatriz == 10):
-            sticker_repeat_change = input('\nDigite o nome da figurinha desejada desejada: ').upper()
+            sticker_repeat_change = input('\nDigite o nome da figurinha desejada: ').upper()
             if(album.change_sticker(sticker_repeat_change)):
                 print('\n----- Figurinha Trocada -----')
             else:
