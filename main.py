@@ -79,7 +79,6 @@ def main():
 
             df = pd.DataFrame(details)
 
-            # print(df)
             print(df.to_string(index=False))
 
             relatorio = int(
